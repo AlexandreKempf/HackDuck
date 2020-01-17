@@ -120,9 +120,3 @@ def run_flow(config, callargs, main=True):
         os.remove(f"/tmp/flow.flow")
     state = flow.run(**callargs)
     return return_flow_output(config, ref, state)
-
-######################################
-######################################
-
-# config = yaml.load(open('/home/alex/awesome/HackDuck/iris/flows/iris_classif_with_sub.yaml', 'r'), Loader=yaml.FullLoader)
-# run_flow(config, {})

@@ -34,9 +34,17 @@ Run model from with a REST app (MLflow):
 
 # TODO:
 [ ] map over subflows ?
-[ ] pip package for TaskBank and save commit (needed to rerun the flow)
+[ ] create a script to run it with HackDuck file.yaml --argsname argvalue ...
+[ ] save version for all requirements (needed to rerun the flow)
 [ ] save python files inside mlruns/... and git them and save git commit
 [ ] being able to rerun a previous flow (save args and kwargs and output ref)
 [ ] run it in a docker
 [ ] put to prod thanks to travis CI that create the MLflow git repo
 [ ] do deep learning with it
+
+
+# use it
+```python
+config = yaml.load(open('/home/alex/awesome/HackDuck/iris/flows/iris_classif_with_sub.yaml', 'r'), Loader=yaml.FullLoader)
+run_flow(config, {})
+```
