@@ -1,4 +1,0 @@
-artifact_location: file:///home/alex/awesome/HackDuck/HackDuck/mlruns/1
-experiment_id: '1'
-lifecycle_stage: active
-name: IrisDataset
