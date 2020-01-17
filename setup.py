@@ -21,5 +21,15 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    install_requires=[
+          'prefect',
+          'mlflow',
+          'pyyaml',
+          'numpy',
+          'torch',
+          'simplejson',
+          'TaskBank',
+      ],
+
     python_requires='>=3.6',
 )
