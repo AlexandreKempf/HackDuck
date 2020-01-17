@@ -124,5 +124,5 @@ def run_flow(config, callargs, main=True):
 ######################################
 ######################################
 
-config = yaml.load(open('/home/alex/awesome/HackDuck/iris/flows/iris_classif_with_sub.yaml', 'r'), Loader=yaml.FullLoader)
-run_flow(config, {})
+# config = yaml.load(open('/home/alex/awesome/HackDuck/iris/flows/iris_classif_with_sub.yaml', 'r'), Loader=yaml.FullLoader)
+# run_flow(config, {})

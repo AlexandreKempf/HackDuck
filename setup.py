@@ -7,7 +7,7 @@ packages = ["HackDuck"]
 
 setuptools.setup(
     name="HackDuck",
-    version="0.1.0",
+    version="0.1.2",
     author="Alexandre Kempf",
     author_email="alexandre.kempf@cri-paris.org",
     description="Machine learning data flow for reproducible data science",
