@@ -1,21 +1,5 @@
 # IDEAL HACKDUCK PROJECT
 
-
-Several pipelines for dataflow (Prefect):
-  - nothing -> data_generation -> save to disk
-  - preprocessing
-  - augmentation
-  - postprocessing
-
-Model handle (Pytorch & Ignite):
-  - fit -> give X and Y and learn
-  - evaluate -> give X and Y, predict and return metrics
-  - predict -> give X, return Y
-
-Save logs and artifacts (MLflow):
-  - save metrics during training (ignite)
-  - save a bunch of data before and after each pipeline
-
 Run model from with a REST app (MLflow):
   - save a github folder for each project
   - can easely have predition on a bunch of data
@@ -33,18 +17,19 @@ Run model from with a REST app (MLflow):
 
 
 # TODO:
-[ ] map over subflows ?
-[ ] create a script to run it with HackDuck file.yaml --argsname argvalue ...
-[ ] save version for all requirements (needed to rerun the flow)
-[ ] save python files inside mlruns/... and git them and save git commit
-[ ] being able to rerun a previous flow (save args and kwargs and output ref)
-[ ] run it in a docker
-[ ] put to prod thanks to travis CI that create the MLflow git repo
-[ ] do deep learning with it
+ - [ ] map over subflows ?
+ - [ ] create a script to run it with HackDuck file.yaml --argsname argvalue ...
+ - [ ] run it in a docker
+ - [ ] save version for all requirements (needed to rerun the flow)
+ - [ ] save python files inside mlruns/... and git them and save git commit
+ - [ ] being able to rerun a previous flow (save args and kwargs and output ref)
+ - [ ] put to prod thanks to travis CI that create the MLflow git repo
+ - [ ] generate examples for people to use
 
 
 # use it
 ```python
+from HackDuck import run_flow
 config = yaml.load(open('/home/alex/awesome/HackDuck/iris/flows/iris_classif_with_sub.yaml', 'r'), Loader=yaml.FullLoader)
 run_flow(config, {})
 ```
