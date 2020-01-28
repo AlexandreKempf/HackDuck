@@ -7,7 +7,7 @@ packages = ["HackDuck"]
 
 setuptools.setup(
     name="HackDuck",
-    version="0.1.4",
+    version="0.1.5",
     author="Alexandre Kempf",
     author_email="alexandre.kempf@cri-paris.org",
     description="Machine learning data flow for reproducible data science",
@@ -32,6 +32,6 @@ setuptools.setup(
       ],
 
     python_requires='>=3.6',
-    entry_points={"console_scripts": ["hackduck = src.cli:main"]},
+    scripts=['hackduck']
 
 )
