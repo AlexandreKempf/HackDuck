@@ -18,7 +18,6 @@ Run model from with a REST app (MLflow):
 
 # TODO:
  - [ ] map over subflows ?
- - [ ] create a script to run it with HackDuck file.yaml --argsname argvalue ...
  - [ ] run it in a docker
  - [ ] save version for all requirements (needed to rerun the flow)
  - [ ] save python files inside mlruns/... and git them and save git commit
@@ -28,8 +27,16 @@ Run model from with a REST app (MLflow):
 
 
 # use it
+
+```bash
+hackduck config.yaml --threshold 5
+```
+
+or
+
 ```python
 from HackDuck import run_flow
-config = yaml.load(open('/home/alex/awesome/HackDuck/iris/flows/iris_classif_with_sub.yaml', 'r'), Loader=yaml.FullLoader)
-run_flow(config, {})
+import yaml
+config = yaml.load(open('config.yaml', 'r'), Loader=yaml.FullLoader)
+run_flow(config, {'threshold': 5})
 ```
